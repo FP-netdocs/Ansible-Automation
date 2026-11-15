@@ -1,0 +1,4 @@
+- name: print myroutes
+  #prints to screen the output saved inside the variable "myroutes"
+  debug:
+   var: myroutes["stdout_lines"][0]
