@@ -1,0 +1,27 @@
+- name: Show ip routes playbook
+  hosts: routers-test
+  gather_facts: no
+
+  vars_prompt:
+  #prompts in unsername and password to use for this tasks
+  - name: custom_username
+    prompt: "Insert username"
+    private: no
+  - name: custom_password
+    prompt: "Insert password"
+    private: yes
+  - name: custom_enable_password
+    prompt: "Insert enable password"
+    private: yes
+
+  vars:
+   #uses the defined username and password given via prompt
+   ansible_user: "{{custom_username}}"
+   ansible_password: "{{custom_password}}"
+   #enables the priviledge mode with the defined method "enable" and the prompted password "custom_enable_password"
+   ansible_become: yes
+   ansible_become_method: enable
+   ansible_become_password: "{{custom_enable_password}}"
+
+  roles:
+   - cisco-show-routes
