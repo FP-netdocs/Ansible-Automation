@@ -1,0 +1,5 @@
+- name: run command "show routes"
+  #executes the command "show ip route" and saves the output inside the variable "myroutes"
+  cisco.ios.ios_command:
+   commands: show ip route
+  register: myroutes
