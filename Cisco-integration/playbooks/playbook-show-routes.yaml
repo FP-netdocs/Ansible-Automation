@@ -24,4 +24,5 @@
    ansible_become_password: "{{custom_enable_password}}"
 
   roles:
+   #it calls the role "cisco-show-routes" to execute the needed commands
    - cisco-show-routes
