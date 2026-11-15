@@ -1,2 +1,2 @@
 # Ansible-Automation
-A group of scripts created while i was studying Ansible integration
+A group of scripts I created while studying Ansible integration with Cisco CML
