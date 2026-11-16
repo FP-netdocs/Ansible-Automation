@@ -1,5 +1,5 @@
 - name: Show ip routes playbook
-  hosts: cisco-routers
+  hosts: ciscorouters
   gather_facts: no
 
   vars_prompt:
