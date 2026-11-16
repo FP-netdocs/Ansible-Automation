@@ -1,0 +1,9 @@
+#[examplehosts]
+#127.0.0.1
+
+[cisco-routers]
+R[1:4].lab.local
+
+[cisco-routers:vars]
+ansible_connection=ansible.netcommon.network_cli
+ansible_network_os=cisco.ios.ios
